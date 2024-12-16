@@ -138,3 +138,7 @@
     0 -24px 24px -16px rgba(5, 5, 5, 0.09), 0 6px 13px 0 rgba(5, 5, 5, 0.1),
     0 -6px 4px -4px rgba(5, 5, 5, 0.1), 0 5px 1.5px -4px rgba(5, 5, 5, 0.25);
 }
+
+.mobile .toggleButton{
+  backdrop-filter: none;
+}
