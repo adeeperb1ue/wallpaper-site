@@ -497,16 +497,14 @@ const wallpapers: Wallpaper[] = [
   },
 ];
 
-//https://firebasestorage.googleapis.com/v0/b/reflective-void.firebasestorage.app/o/thumbnails%2Falternate.png?alt=media&token=bd096fd0-de54-4b92-a904-a2491f89b963
-
-if (!devMode) {
+if (devMode) {
   for (const wallpaper of wallpapers) {
-    wallpaper.thumbnail = `${url}/thumbnails%2F${encodeURIComponent(
+    wallpaper.thumbnail = `https://cdn.jsdelivr.net/gh/adeeperb1ue/wallpaper-site/src/image-manager/thumbnails/${encodeURIComponent(
       wallpaper.name
-    )}.png?alt=media`;
-    wallpaper.src = `${url}/images%2F${encodeURIComponent(
+    )}.png`
+    wallpaper.src = `https://cdn.jsdelivr.net/gh/adeeperb1ue/wallpaper-site/src/image-manager/images/${encodeURIComponent(
       wallpaper.name
-    )}.png?alt=media`;
+    )}.png`
   }
 }
 

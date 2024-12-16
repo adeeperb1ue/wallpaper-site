@@ -86,7 +86,7 @@ img.off {
   z-index: 1;
 }
 
-.App.mobile:has(.imageWrapper:hover) .imageWrapper:not(:hover) {
+.App:not(.mobile):has(.imageWrapper:hover) .imageWrapper:not(:hover) {
   opacity: 0.5;
   filter: saturate(0.5);
 }

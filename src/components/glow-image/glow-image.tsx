@@ -15,7 +15,7 @@ function GlowImage(props: GlowImageProps) {
 
     const { ref, inView } = useInView({
         // root: props.scrollRef.current,
-        // rootMargin: "64px 0px",
+        rootMargin: "600px 0px",
         triggerOnce: true,
       });
 

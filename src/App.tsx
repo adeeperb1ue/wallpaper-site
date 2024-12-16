@@ -23,8 +23,6 @@ function App() {
   );
   const [projectedImage, setProjectedImage] = useState<Wallpaper | null>(null);
 
-  console.log(app.name)
-
   const checkUrl = () => {
     const path = location.pathname;
     const foundWallpaper = wallpapers.find(
