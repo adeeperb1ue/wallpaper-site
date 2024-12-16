@@ -497,7 +497,7 @@ const wallpapers: Wallpaper[] = [
   },
 ];
 
-if (devMode) {
+if (!devMode) {
   for (const wallpaper of wallpapers) {
     wallpaper.thumbnail = `https://cdn.jsdelivr.net/gh/adeeperb1ue/wallpaper-site/src/image-manager/thumbnails/${encodeURIComponent(
       wallpaper.name
