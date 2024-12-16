@@ -1,0 +1,140 @@
+.toggleButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border: none;
+  padding: 0 24px;
+  color: rgba(255, 255, 255, 0.8);
+  background: linear-gradient(to bottom, #30303080, #20202080);
+  border-radius: 4px;
+  text-shadow: #000 0 -1px 0;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: inset 0px 3px 5px 0px rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
+}
+
+.toggleButton .material-symbols-outlined {
+  font-size: inherit;
+  font-weight: inherit;
+  font-variation-settings: inherit;
+}
+
+.toggleButton.active {
+  color: white;
+  background: linear-gradient(to bottom, #000000f0, #20202080);
+  text-shadow: 0px 0px 16px rgba(255, 255, 255, 0.8);
+}
+
+.toggleButton * {
+  z-index: 2;
+}
+
+.toggleButton.icon {
+  width: 40px;
+  padding: 0px;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  font-variation-settings: "FILL" 1;
+}
+
+.toggleButton .state {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 1;
+  border-radius: inherit;
+  opacity: 0;
+}
+
+.toggleButton:hover .state {
+  opacity: 0.04;
+}
+
+.toggleButton .dot {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color);
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0px 0px 0px 0px var(--color);
+  overflow: hidden;
+}
+
+.toggleButton .dot::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, white, black);
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+}
+
+.toggleButton.active .dot {
+  width: 14px;
+  height: 14px;
+  background: hsl(from var(--color) h calc(s * 1.5) calc(l * 1.1));
+  box-shadow: 0px 0px 8px 0px var(--color);
+}
+
+.toggleButton:has(.dot) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  padding: 0px;
+}
+
+.toggleWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  background: rgba(0, 0, 0, 0.16);
+  border-radius: 32px;
+}
+
+.toggleWrapper .toggleButton {
+  width: 40px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggleWrapper .toggleButton:nth-child(1) {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.toggleWrapper .toggleButton:nth-child(2) {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.gloss.active::after {
+  -webkit-mask-image: linear-gradient(-2deg, #000, transparent 75%);
+  mask-image: linear-gradient(-2deg, #000, transparent 75%);
+}
+
+.gloss:has(.dot).active::after {
+  border-color: color-mix(in srgb, var(--color), transparent 80%);
+  -webkit-mask-image: linear-gradient(-2deg, #000, transparent 75%);
+  mask-image: linear-gradient(-2deg, #000, transparent 75%);
+}
+
+.gloss.active::before {
+  box-shadow: inset -2px -4px 16px 0 hsla(0, 0%, 97%, 0.06),
+    0 -24px 24px -16px rgba(5, 5, 5, 0.09), 0 6px 13px 0 rgba(5, 5, 5, 0.1),
+    0 -6px 4px -4px rgba(5, 5, 5, 0.1), 0 5px 1.5px -4px rgba(5, 5, 5, 0.25);
+}

@@ -1,0 +1,45 @@
+.filterBar {
+  position: sticky;
+  display: flex;
+  flex-wrap: wrap;
+  top: 0px;
+  padding: 16px 0px;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  background: transparent;
+  transition: all 0.1s linear;
+}
+
+.filtersWrapper {
+  border-radius: 32px;
+  box-sizing: border-box;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filterChip {
+  display: inline-flex;
+  border: 1px solid var(--brand);
+  color: white;
+  padding: 4px 16px;
+  border-radius: 32px;
+}
+
+.filterChip.active {
+  background: var(--brand);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .filterBar {
+        position: relative;
+    }
+
+    .filtersWrapper::before{
+        backdrop-filter: none;
+        background: linear-gradient(to bottom right, var(--gray), color-mix(in srgb, var(--gray), transparent 80%));
+    }
+  }
