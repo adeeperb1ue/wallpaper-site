@@ -52,6 +52,8 @@ import splash from "./images/splash.png";
 import axe from "./images/axe.png";
 import swirl from "./images/swirl.png"
 import leaf from "./images/leaf.png"
+import pillar from "./images/pillar.png"
+import twist from "./images/twist.png"
 
 import novaThumbnail from "./thumbnails/nova.png";
 import fluidThumbnail from "./thumbnails/fluid.png";
@@ -107,6 +109,8 @@ import splashThumbnail from "./thumbnails/splash.png";
 import axeThumbnail from "./thumbnails/axe.png";
 import swirlThumbnail from "./thumbnails/swirl.png";
 import leafThumbnail from "./thumbnails/leaf.png";
+import pillarThumbnail from "./thumbnails/pillar.png";
+import twistThumbnail from "./thumbnails/twist.png";
 
 import { Wallpaper, Filter } from "./types";
 
@@ -494,6 +498,20 @@ const wallpapers: Wallpaper[] = [
     thumbnail: leafThumbnail,
     tags: ["Dark", "3d", "Orange", "Abstract", "Red"],
     date: 1734062661559,
+  },
+  {
+    name: "pillar",
+    src: pillar,
+    thumbnail: pillarThumbnail,
+    tags: ["Light", "3d", "Orange", "Abstract", "Pink", "Yellow"],
+    date: 1734583370240,
+  },
+  {
+    name: "twist",
+    src: twist,
+    thumbnail: twistThumbnail,
+    tags: ["Dark", "3d", "Orange", "Abstract", "Red", "Blue"],
+    date: 1734583370540,
   },
 ];
 
