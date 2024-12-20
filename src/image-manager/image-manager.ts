@@ -55,62 +55,62 @@ import leaf from "./images/leaf.png"
 import pillar from "./images/pillar.png"
 import twist from "./images/twist.png"
 
-import novaThumbnail from "./thumbnails/nova.png";
-import fluidThumbnail from "./thumbnails/fluid.png";
-import leavesThumbnail from "./thumbnails/leaves.png";
-import gadgetThumbnail from "./thumbnails/gadget.png";
-import duneThumbnail from "./thumbnails/dune.png";
-import holographicLeavesThumbnail from "./thumbnails/holographic-leaves.png";
-import bulbThumbnail from "./thumbnails/bulb.png";
-import dataStreamThumbnail from "./thumbnails/data-stream.png";
-import ringLightThumbnail from "./thumbnails/ring-light.png";
-import streetLightThumbnail from "./thumbnails/street-light.png";
-import superMassiveThumbnail from "./thumbnails/super-massive.png";
-import skylineThumbnail from "./thumbnails/skyline.png";
-import streaksThumbnail from "./thumbnails/streaks.png";
-import gizmoThumbnail from "./thumbnails/gizmo.png";
-import contactThumbnail from "./thumbnails/contact.png";
-import alternateThumbnail from "./thumbnails/alternate.png";
-import scenicThumbnail from "./thumbnails/scenic.png";
-import lightStopThumbnail from "./thumbnails/light-stop.png";
-import duskThumbnail from "./thumbnails/dusk.png";
-import dataFieldThumbnail from "./thumbnails/data-field.png";
-import waveDashThumbnail from "./thumbnails/wave-dash.png";
-import vibeFrogThumbnail from "./thumbnails/vibe-frog.png";
-import flowStateThumbnail from "./thumbnails/flow-state.png";
-import oThumbnail from "./thumbnails/O.png";
-import junkThumbnail from "./thumbnails/junk.png";
-import greenAndGoldThumbnail from "./thumbnails/green-and-gold.png";
-import dropletsThumbnail from "./thumbnails/droplets.png";
-import heavenlyThumbnail from "./thumbnails/heavenly.png";
-import frontierThumbnail from "./thumbnails/frontier.png";
-import gridLockThumbnail from "./thumbnails/grid-lock.png";
-import towersThumbnail from "./thumbnails/towers.png";
-import cleanThumbnail from "./thumbnails/clean.png";
-import streamThumbnail from "./thumbnails/stream.png";
-import circuitThumbnail from "./thumbnails/circuit.png";
-import chromaticThumbnail from "./thumbnails/chromatic.png";
-import jellyThumbnail from "./thumbnails/jelly.png";
-import layeredThumbnail from "./thumbnails/layered.png";
-import greenHouseThumbnail from "./thumbnails/green-house.png";
-import focusThumbnail from "./thumbnails/focus.png";
-import scalesThumbnail from "./thumbnails/scales.png";
-import surfaceThumbnail from "./thumbnails/surface.png";
-import waveThumnail from "./thumbnails/wave.png";
-import amplifierThumbnail from "./thumbnails/amplifier.png";
-import inclineThumbnail from "./thumbnails/incline.png";
-import panelThumbnail from "./thumbnails/panel.png";
-import motionBlurThumbnail from "./thumbnails/motion-blur.png";
-import lotusThumbnail from "./thumbnails/lotus.png";
-import orbiThumbnailt from "./thumbnails/orbit.png";
-import plumeThumbnail from "./thumbnails/plume.png";
-import flowThumbnail from "./thumbnails/flow.png";
-import splashThumbnail from "./thumbnails/splash.png";
-import axeThumbnail from "./thumbnails/axe.png";
-import swirlThumbnail from "./thumbnails/swirl.png";
-import leafThumbnail from "./thumbnails/leaf.png";
-import pillarThumbnail from "./thumbnails/pillar.png";
-import twistThumbnail from "./thumbnails/twist.png";
+import novaThumbnail from "./thumbnails/nova.webp";
+import fluidThumbnail from "./thumbnails/fluid.webp";
+import leavesThumbnail from "./thumbnails/leaves.webp";
+import gadgetThumbnail from "./thumbnails/gadget.webp";
+import duneThumbnail from "./thumbnails/dune.webp";
+import holographicLeavesThumbnail from "./thumbnails/holographic-leaves.webp";
+import bulbThumbnail from "./thumbnails/bulb.webp";
+import dataStreamThumbnail from "./thumbnails/data-stream.webp";
+import ringLightThumbnail from "./thumbnails/ring-light.webp";
+import streetLightThumbnail from "./thumbnails/street-light.webp";
+import superMassiveThumbnail from "./thumbnails/super-massive.webp";
+import skylineThumbnail from "./thumbnails/skyline.webp";
+import streaksThumbnail from "./thumbnails/streaks.webp";
+import gizmoThumbnail from "./thumbnails/gizmo.webp";
+import contactThumbnail from "./thumbnails/contact.webp";
+import alternateThumbnail from "./thumbnails/alternate.webp";
+import scenicThumbnail from "./thumbnails/scenic.webp";
+import lightStopThumbnail from "./thumbnails/light-stop.webp";
+import duskThumbnail from "./thumbnails/dusk.webp";
+import dataFieldThumbnail from "./thumbnails/data-field.webp";
+import waveDashThumbnail from "./thumbnails/wave-dash.webp";
+import vibeFrogThumbnail from "./thumbnails/vibe-frog.webp";
+import flowStateThumbnail from "./thumbnails/flow-state.webp";
+import oThumbnail from "./thumbnails/O.webp";
+import junkThumbnail from "./thumbnails/junk.webp";
+import greenAndGoldThumbnail from "./thumbnails/green-and-gold.webp";
+import dropletsThumbnail from "./thumbnails/droplets.webp";
+import heavenlyThumbnail from "./thumbnails/heavenly.webp";
+import frontierThumbnail from "./thumbnails/frontier.webp";
+import gridLockThumbnail from "./thumbnails/grid-lock.webp";
+import towersThumbnail from "./thumbnails/towers.webp";
+import cleanThumbnail from "./thumbnails/clean.webp";
+import streamThumbnail from "./thumbnails/stream.webp";
+import circuitThumbnail from "./thumbnails/circuit.webp";
+import chromaticThumbnail from "./thumbnails/chromatic.webp";
+import jellyThumbnail from "./thumbnails/jelly.webp";
+import layeredThumbnail from "./thumbnails/layered.webp";
+import greenHouseThumbnail from "./thumbnails/green-house.webp";
+import focusThumbnail from "./thumbnails/focus.webp";
+import scalesThumbnail from "./thumbnails/scales.webp";
+import surfaceThumbnail from "./thumbnails/surface.webp";
+import waveThumnail from "./thumbnails/wave.webp";
+import amplifierThumbnail from "./thumbnails/amplifier.webp";
+import inclineThumbnail from "./thumbnails/incline.webp";
+import panelThumbnail from "./thumbnails/panel.webp";
+import motionBlurThumbnail from "./thumbnails/motion-blur.webp";
+import lotusThumbnail from "./thumbnails/lotus.webp";
+import orbiThumbnailt from "./thumbnails/orbit.webp";
+import plumeThumbnail from "./thumbnails/plume.webp";
+import flowThumbnail from "./thumbnails/flow.webp";
+import splashThumbnail from "./thumbnails/splash.webp";
+import axeThumbnail from "./thumbnails/axe.webp";
+import swirlThumbnail from "./thumbnails/swirl.webp";
+import leafThumbnail from "./thumbnails/leaf.webp";
+import pillarThumbnail from "./thumbnails/pillar.webp";
+import twistThumbnail from "./thumbnails/twist.webp";
 
 import { Wallpaper, Filter } from "./types";
 
@@ -519,7 +519,7 @@ if (!devMode) {
   for (const wallpaper of wallpapers) {
     wallpaper.thumbnail = `https://cdn.jsdelivr.net/gh/adeeperb1ue/wallpaper-site/src/image-manager/thumbnails/${encodeURIComponent(
       wallpaper.name
-    )}.png`
+    )}.webp`
     wallpaper.src = `https://cdn.jsdelivr.net/gh/adeeperb1ue/wallpaper-site/src/image-manager/images/${encodeURIComponent(
       wallpaper.name
     )}.png`

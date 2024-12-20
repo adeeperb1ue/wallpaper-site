@@ -60,7 +60,7 @@ function App() {
         </div>
         <div
           className="heroImage"
-          style={{ backgroundImage: `url("/images/grid.png")` }}
+          style={{ backgroundImage: `url("/images/grid.webp")` }}
         ></div>
       </div>
 
