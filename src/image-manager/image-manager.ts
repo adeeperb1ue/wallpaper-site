@@ -54,6 +54,10 @@ import swirl from "./images/swirl.png"
 import leaf from "./images/leaf.png"
 import pillar from "./images/pillar.png"
 import twist from "./images/twist.png"
+import coastal from "./images/coastal.png";
+import blown from "./images/blown.png";
+import rings from "./images/rings.png"
+import bands from "./images/bands.png"
 
 import novaThumbnail from "./thumbnails/nova.webp";
 import fluidThumbnail from "./thumbnails/fluid.webp";
@@ -111,6 +115,10 @@ import swirlThumbnail from "./thumbnails/swirl.webp";
 import leafThumbnail from "./thumbnails/leaf.webp";
 import pillarThumbnail from "./thumbnails/pillar.webp";
 import twistThumbnail from "./thumbnails/twist.webp";
+import coastalThumbnail from "./thumbnails/coastal.webp";
+import blownThumbnail from "./thumbnails/blown.webp";
+import ringsThumbnail from "./thumbnails/rings.webp"
+import bandsThumbnail from "./thumbnails/bands.webp"
 
 import { Wallpaper, Filter } from "./types";
 
@@ -512,6 +520,34 @@ const wallpapers: Wallpaper[] = [
     thumbnail: twistThumbnail,
     tags: ["Dark", "3d", "Orange", "Abstract", "Red", "Blue"],
     date: 1734583370540,
+  },
+  {
+    name: "coastal",
+    src: coastal,
+    thumbnail: coastalThumbnail,
+    tags: ["Dark", "Photo", "Orange", "Purple", "Pink", "Blue", "Nature"],
+    date: 1734838621954,
+  },
+  {
+    name: "blown",
+    src: blown,
+    thumbnail: blownThumbnail,
+    tags: ["Dark", "Photo", "White", "Abstract", "Blue", "Space"],
+    date: 1734838622954,
+  },
+  {
+    name: "rings",
+    src: rings,
+    thumbnail: ringsThumbnail,
+    tags: ["Light", "Illustration", "Orange", "Purple", "Pink", "Blue", "Space"],
+    date: 1734838623954,
+  },
+  {
+    name: "bands",
+    src: bands,
+    thumbnail: bandsThumbnail,
+    tags: ["Dark", "3D", "Black", "Abstract",],
+    date: 1734838624954,
   },
 ];
 
