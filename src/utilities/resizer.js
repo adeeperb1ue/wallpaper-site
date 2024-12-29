@@ -11,6 +11,8 @@ const resizeImages = async () => {
     const files = await fs.promises.readdir(inputDir);
 
     for (const file of files) {
+      if(!file.endsWith(".png")) continue;
+      
         console.log(file);
       const inputPath = path.join(inputDir, file);
       const outputPath = path.join(outputDir, file.replace("png", "webp"));

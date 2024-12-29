@@ -169,8 +169,8 @@ h1 {
 
 @media (max-width: 600px) {
   .containerGrid {
-    grid-template-columns: 1fr;
     width: 90%;
+    grid-gap: 16px;
   }
 
   .hero {

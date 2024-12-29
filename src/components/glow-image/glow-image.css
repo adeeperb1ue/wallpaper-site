@@ -15,10 +15,6 @@
   box-shadow: inset 2px 4px 16px hsla(0, 0%, 97%, 0.06);
 }
 
-.imageWrapper:has(img) {
-  border-radius: 32px;
-}
-
 .imageWrapper:has(.off)::before {
   opacity: 0;
 }
@@ -89,4 +85,10 @@ img.off {
 .App:not(.mobile):has(.imageWrapper:hover) .imageWrapper:not(:hover) {
   opacity: 0.5;
   filter: saturate(0.5);
+}
+
+@media (max-width: 600px) {
+  .imageWrapper, .imageOverflowWrapper {
+    border-radius: 16px;
+  }
 }

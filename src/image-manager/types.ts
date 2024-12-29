@@ -9,7 +9,7 @@ export const Colors = [
   "Pink",
   "White",
   "Black",
-];
+] as const;
 export const Styles = ["Photo", "3d", "Illustration", "Painting"] as const;
 export const Themes = ["Abstract", "Nature", "City", "Space"] as const;
 export const AllTags = [...Modes, ...Colors, ...Styles, ...Themes] as const;
@@ -42,7 +42,7 @@ export interface Filter {
   passes: (arg0: Wallpaper) => boolean;
 }
 
-export const colorTagToHex: {[key: ColorTag]: string;} = {
+export const colorTagToHex: {[key: string]: string;} = {
     "Red": "#ffa8a8",
     "Blue": "#92cef7",
     "Green": "#98dd98",
@@ -55,5 +55,8 @@ export const colorTagToHex: {[key: ColorTag]: string;} = {
 }
 
 export function isColorTag(tag: Tag): tag is ColorTag {
-  return Colors.indexOf(tag) !== -1;
+  for(const color of Colors){
+    if(tag === color) return true;
+  }
+  return false;
 }

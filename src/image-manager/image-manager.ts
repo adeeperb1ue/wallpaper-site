@@ -57,7 +57,19 @@ import twist from "./images/twist.png"
 import coastal from "./images/coastal.png";
 import blown from "./images/blown.png";
 import rings from "./images/rings.png"
+import rings2 from "./images/rings-2.png"
 import bands from "./images/bands.png"
+import panacea from "./images/panacea.png"
+import connection from "./images/connection.png"
+import x from "./images/x.png"
+import angular from "./images/angular.png"
+import gadget2 from "./images/gadget-2.png"
+import relic from "./images/relic.png"
+import gadget3 from "./images/gadget-3.png" 
+import engine from "./images/engine.png"
+import energyDrink from "./images/energy-drink.png"
+import clouds from "./images/clouds.png"
+import maelstrom from "./images/maelstrom.png"
 
 import novaThumbnail from "./thumbnails/nova.webp";
 import fluidThumbnail from "./thumbnails/fluid.webp";
@@ -118,7 +130,19 @@ import twistThumbnail from "./thumbnails/twist.webp";
 import coastalThumbnail from "./thumbnails/coastal.webp";
 import blownThumbnail from "./thumbnails/blown.webp";
 import ringsThumbnail from "./thumbnails/rings.webp"
+import rings2Thumbnail from "./thumbnails/rings-2.webp"
 import bandsThumbnail from "./thumbnails/bands.webp"
+import panaceaThumbnail from "./thumbnails/panacea.webp"
+import connectionThumbnail from "./thumbnails/connection.webp"
+import xThumbnail from "./thumbnails/x.webp"
+import angularThumbnail from "./thumbnails/angular.webp"
+import gadget2Thumbnail from "./thumbnails/gadget-2.webp"
+import relicThumbnail from "./thumbnails/relic.webp"
+import gadget3Thumbnail from "./thumbnails/gadget-3.webp"
+import engineThumbnail from "./thumbnails/engine.webp"
+import energyDrinkThumbnail from "./thumbnails/energy-drink.webp"
+import cloudsThumbnail from "./thumbnails/clouds.webp"
+import maelstromThumbnail from "./thumbnails/maelstrom.webp"
 
 import { Wallpaper, Filter } from "./types";
 
@@ -543,11 +567,95 @@ const wallpapers: Wallpaper[] = [
     date: 1734838623954,
   },
   {
+    name: "rings-2",
+    src: rings2,
+    thumbnail: rings2Thumbnail,
+    tags: ["Light", "Illustration", "Orange", "Purple", "Pink", "Blue", "Space"],
+    date: 1734838623984,
+  },
+  {
     name: "bands",
     src: bands,
     thumbnail: bandsThumbnail,
-    tags: ["Dark", "3D", "Black", "Abstract",],
+    tags: ["Dark", "3d", "Black", "Abstract",],
     date: 1734838624954,
+  },
+  {
+    name: "panacea",
+    src: panacea,
+    thumbnail: panaceaThumbnail,
+    tags: ["Dark", "Illustration", "Black", "Abstract", "Red"],
+    date: 1735410417996,
+  },
+  {
+    name: "connection",
+    src: connection,
+    thumbnail: connectionThumbnail,
+    tags: ["Dark", "3d", "Blue", "Abstract"],
+    date: 1735436066751,
+  },
+  {
+    name: "x",
+    src: x,
+    thumbnail: xThumbnail,
+    tags: ["Light", "3d", "Pink", "Abstract", "Red"],
+    date: 1735436066851,
+  },
+  {
+    name: "angular",
+    src: angular,
+    thumbnail: angularThumbnail,
+    tags: ["Dark", "3d", "Black", "Red", "Abstract"],
+    date: 1735436066951,
+  },
+  {
+    name: "gadget-2",
+    src: gadget2,
+    thumbnail: gadget2Thumbnail,
+    tags: ["Dark", "3d", "Black", "Red", "Abstract"],
+    date: 1735436067051,
+  },
+  {
+    name: "relic",
+    src: relic,
+    thumbnail: relicThumbnail,
+    tags: ["Dark", "3d", "Black", "Red", "Abstract", "Space", "Photo"],
+    date: 1735436067151,
+  },
+  {
+    name: "gadget-3",
+    src: gadget3,
+    thumbnail: gadget3Thumbnail,
+    tags: ["Light", "3d", "Blue", "Orange", "Abstract"],
+    date: 1735436067251,
+  },
+  {
+    name: "engine",
+    src: engine,
+    thumbnail: engineThumbnail,
+    tags: ["Dark", "3d", "Black", "Red", "Abstract"],
+    date: 1735436067351,
+  },
+  {
+    name: "energy-drink",
+    src: energyDrink,
+    thumbnail: energyDrinkThumbnail,
+    tags: ["Dark", "3d", "Black", "White", "Abstract", "Orange", "Blue"],
+    date: 1735436067451,
+  },
+  {
+    name: "clouds",
+    src: clouds,
+    thumbnail: cloudsThumbnail,
+    tags: ["Light", "Photo", "Space", "Nature", "White", "Blue"],
+    date: 1735436067551,
+  },
+  {
+    name: "maelstrom",
+    src: maelstrom,
+    thumbnail: maelstromThumbnail,
+    tags: ["Light", "3d", "Abstract", "Blue", "Green", "Pink"],
+    date: 1735436067651,
   },
 ];
 
