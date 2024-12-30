@@ -65,11 +65,16 @@ import x from "./images/x.png"
 import angular from "./images/angular.png"
 import gadget2 from "./images/gadget-2.png"
 import relic from "./images/relic.png"
-import gadget3 from "./images/gadget-3.png" 
+import gadget3 from "./images/gadget-3.png"
 import engine from "./images/engine.png"
 import energyDrink from "./images/energy-drink.png"
 import clouds from "./images/clouds.png"
 import maelstrom from "./images/maelstrom.png"
+import relic2 from "./images/relic-2.png"
+import smile from "./images/smile.png"
+import layers from "./images/layers.png"
+import inStream from "./images/in-stream.png"
+import inStream2 from "./images/in-stream-2.png"
 
 import novaThumbnail from "./thumbnails/nova.webp";
 import fluidThumbnail from "./thumbnails/fluid.webp";
@@ -143,6 +148,11 @@ import engineThumbnail from "./thumbnails/engine.webp"
 import energyDrinkThumbnail from "./thumbnails/energy-drink.webp"
 import cloudsThumbnail from "./thumbnails/clouds.webp"
 import maelstromThumbnail from "./thumbnails/maelstrom.webp"
+import relic2Thumbnail from "./thumbnails/relic-2.webp"
+import smileThumbnail from "./thumbnails/smile.webp"
+import layersThumbnail from "./thumbnails/layers.webp"
+import inStreamThumbnail from "./thumbnails/in-stream.webp"
+import inStream2Thumbnail from "./thumbnails/in-stream-2.webp"
 
 import { Wallpaper, Filter } from "./types";
 
@@ -657,6 +667,41 @@ const wallpapers: Wallpaper[] = [
     tags: ["Light", "3d", "Abstract", "Blue", "Green", "Pink"],
     date: 1735436067651,
   },
+  {
+    name: "relic-2",
+    src: relic2,
+    thumbnail: relic2Thumbnail,
+    tags: ["Light", "3d", "Abstract", "Blue", "Purple", "Pink", "Orange"],
+    date: 1735575785389,
+  },
+  {
+    name: "smile",
+    src: smile,
+    thumbnail: smileThumbnail,
+    tags: ["Light", "3d", "Yellow", "Red", "Photo"],
+    date: 1735575785489,
+  },
+  {
+    name: "layers",
+    src: layers,
+    thumbnail: layersThumbnail,
+    tags: ["Dark", "Abstract", "Nature", "Purple", "Blue", "Illustration"],
+    date: 1735575785589,
+  },
+  {
+    name: "in-stream",
+    src: inStream,
+    thumbnail: inStreamThumbnail,
+    tags: ["Dark", "Abstract", "3d", "White", "Blue", "Orange"],
+    date: 1735575785689,
+  },
+  {
+    name: "in-stream-2",
+    src: inStream2,
+    thumbnail: inStream2Thumbnail,
+    tags: ["Dark", "Abstract", "3d", "White", "Blue", "Orange"],
+    date: 1735575785789,
+  }
 ];
 
 if (!devMode) {
@@ -683,7 +728,7 @@ export default class ImageManager {
     return this.filter();
   }
 
-  sort() {}
+  sort() { }
 
   filter() {
     return this.images.filter((wallpaper) => this.passesAllFilters(wallpaper));
