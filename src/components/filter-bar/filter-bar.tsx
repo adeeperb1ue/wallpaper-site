@@ -46,12 +46,12 @@ function FilterBar({ filters, onChange }: FilterBarProps) {
   }
 
   let mode: ModeTag | null = null;
-  for(const filter of filters){
-    if(filter.tag === "Light" && filter.active){
+  for (const filter of filters) {
+    if (filter.tag === "Light" && filter.active) {
       mode = filter.tag;
       break;
     }
-    else if(filter.tag === "Dark" && filter.active){
+    else if (filter.tag === "Dark" && filter.active) {
       mode = filter.tag;
       break;
     }
@@ -61,22 +61,24 @@ function FilterBar({ filters, onChange }: FilterBarProps) {
     <div className={"filterBar "}>
       <div className="containerGrid" style={{ display: "flex" }}>
         <div className="filtersWrapper gloss">
-          <ModeToggleButton mode={mode} onClick={handleModeClick}/>
+          <ModeToggleButton mode={mode} onClick={handleModeClick} />
           {filters.map((filter) => {
             if (isColorTag(filter.tag)) {
               return (
                 <ColorToggleButton
+                  key={filter.tag}
                   color={filter.tag}
                   active={filter.active}
                   onClick={() => handleClick(filter)}
                 />
               );
             }
-            else if(filter.tag === "Dark" || filter.tag === "Light"){
+            else if (filter.tag === "Dark" || filter.tag === "Light") {
               return null;
             }
             return (
               <TextToggleButton
+                key={filter.tag}
                 text={filter.tag}
                 active={filter.active}
                 onClick={() => handleClick(filter)}
