@@ -12,12 +12,16 @@ const resizeImages = async () => {
 
     for (const file of files) {
       if(!file.endsWith(".png")) continue;
-      
-        console.log(file);
+
+      console.log(file);
       const inputPath = path.join(inputDir, file);
       const outputPath = path.join(outputDir, file.replace("png", "webp"));
       const dimensions = sizeOf(inputPath);
-      console.log(dimensions);
+
+      if(fs.existsSync(outputPath)){
+        console.log("already exists, skipping...");
+        continue;
+      }
 
       await sharp(inputPath)
         .resize(dimensions.width / 2, dimensions.height / 2)
