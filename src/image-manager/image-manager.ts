@@ -75,6 +75,12 @@ import smile from "./images/smile.png"
 import layers from "./images/layers.png"
 import inStream from "./images/in-stream.png"
 import inStream2 from "./images/in-stream-2.png"
+import overcast from "./images/overcast.png"
+import cat from "./images/cat.png"
+import portal from "./images/portal.png"
+import lotus2 from "./images/lotus-2.png"
+import gadget4 from "./images/gadget-4.png"
+import gadget5 from "./images/gadget-5.png"
 
 import novaThumbnail from "./thumbnails/nova.webp";
 import fluidThumbnail from "./thumbnails/fluid.webp";
@@ -153,6 +159,12 @@ import smileThumbnail from "./thumbnails/smile.webp"
 import layersThumbnail from "./thumbnails/layers.webp"
 import inStreamThumbnail from "./thumbnails/in-stream.webp"
 import inStream2Thumbnail from "./thumbnails/in-stream-2.webp"
+import overcastThumbnail from "./thumbnails/overcast.webp"
+import catThumbnail  from "./thumbnails/cat.webp"
+import portalThumbnail  from "./thumbnails/portal.webp"
+import lotus2Thumbnail  from "./thumbnails/lotus-2.webp"
+import gadget4Thumbnail  from "./thumbnails/gadget-4.webp"
+import gadget5Thumbnail  from "./thumbnails/gadget-5.webp"
 
 import { Wallpaper, Filter } from "./types";
 
@@ -701,7 +713,49 @@ const wallpapers: Wallpaper[] = [
     thumbnail: inStream2Thumbnail,
     tags: ["Dark", "Abstract", "3d", "White", "Blue", "Orange"],
     date: 1735575785789,
-  }
+  },
+  {
+    name: "overcast",
+    src: overcast,
+    thumbnail: overcastThumbnail,
+    tags: ["Light", "Nature", "Space", "White", "Blue", "Orange", "Purple", "Illustration"],
+    date: 1735575786789,
+  },
+  {
+    name: "cat",
+    src: cat,
+    thumbnail: catThumbnail,
+    tags: ["Light", "Space", "White", "Blue", "Orange", "Purple", "Illustration"],
+    date: 1735575787789,
+  },
+  {
+    name: "portal",
+    src: portal,
+    thumbnail: portalThumbnail,
+    tags: ["Light", "Nature", "Space", "White", "Blue", "Green", "Illustration"],
+    date: 1735575788789,
+  },
+  {
+    name: "lotus-2",
+    src: lotus2,
+    thumbnail: lotus2Thumbnail,
+    tags: ["Dark", "Nature", "Green", "Orange", "Illustration"],
+    date: 1735575789400,
+  },
+  {
+    name: "gadget-4",
+    src: gadget4,
+    thumbnail: gadget4Thumbnail,
+    tags: ["Light", "3d", "Abstract", "Purple", "Blue", "Orange"],
+    date: 1735575789500,
+  },
+  {
+    name: "gadget-5",
+    src: gadget5,
+    thumbnail: gadget5Thumbnail,
+    tags: ["Light", "3d", "Abstract", "Purple", "Blue", "Pink"],
+    date: 1735575789600,
+  },
 ];
 
 if (!devMode) {
