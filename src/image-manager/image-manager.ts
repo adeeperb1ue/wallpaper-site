@@ -78,9 +78,13 @@ import inStream2 from "./images/in-stream-2.png"
 import overcast from "./images/overcast.png"
 import cat from "./images/cat.png"
 import portal from "./images/portal.png"
+import cell from "./images/cell.png"
+import tunnel from "./images/tunnel.png"
 import lotus2 from "./images/lotus-2.png"
 import gadget4 from "./images/gadget-4.png"
 import gadget5 from "./images/gadget-5.png"
+import gadget6 from "./images/gadget-6.png"
+import gadget7 from "./images/gadget-7.png"
 
 import novaThumbnail from "./thumbnails/nova.webp";
 import fluidThumbnail from "./thumbnails/fluid.webp";
@@ -162,9 +166,13 @@ import inStream2Thumbnail from "./thumbnails/in-stream-2.webp"
 import overcastThumbnail from "./thumbnails/overcast.webp"
 import catThumbnail  from "./thumbnails/cat.webp"
 import portalThumbnail  from "./thumbnails/portal.webp"
+import cellThumbnail  from "./thumbnails/cell.webp"
+import tunnelThumbnail from "./thumbnails/tunnel.webp"
 import lotus2Thumbnail  from "./thumbnails/lotus-2.webp"
 import gadget4Thumbnail  from "./thumbnails/gadget-4.webp"
 import gadget5Thumbnail  from "./thumbnails/gadget-5.webp"
+import gadget6Thumbnail  from "./thumbnails/gadget-6.webp"
+import gadget7Thumbnail  from "./thumbnails/gadget-7.webp"
 
 import { Wallpaper, Filter } from "./types";
 
@@ -361,7 +369,7 @@ const wallpapers: Wallpaper[] = [
     name: "droplets",
     src: droplets,
     thumbnail: dropletsThumbnail,
-    tags: ["Dark", "Abstract", "3d", "Blue", "Pink", "Yellow"],
+    tags: ["Dark", "Abstract", "3d", "Blue", "Pink", "Yellow", "Purple"],
     date: 1728096538145,
   },
   {
@@ -736,6 +744,20 @@ const wallpapers: Wallpaper[] = [
     date: 1735575788789,
   },
   {
+    name: "cell",
+    src: cell,
+    thumbnail: cellThumbnail,
+    tags: ["Dark", "Abstract", "Blue", "Red", "Illustration"],
+    date: 1735575788889,
+  },
+  {
+    name: "tunnel",
+    src: tunnel,
+    thumbnail: tunnelThumbnail,
+    tags: ["Dark", "Abstract", "Blue", "Red", "Illustration"],
+    date: 1735575788989,
+  },
+  {
     name: "lotus-2",
     src: lotus2,
     thumbnail: lotus2Thumbnail,
@@ -755,6 +777,20 @@ const wallpapers: Wallpaper[] = [
     thumbnail: gadget5Thumbnail,
     tags: ["Light", "3d", "Abstract", "Purple", "Blue", "Pink"],
     date: 1735575789600,
+  },
+  {
+    name: "gadget-6",
+    src: gadget6,
+    thumbnail: gadget6Thumbnail,
+    tags: ["Light", "3d", "Abstract", "Purple", "Blue", "Pink"],
+    date: 1735575789700,
+  },
+  {
+    name: "gadget-7",
+    src: gadget7,
+    thumbnail: gadget7Thumbnail,
+    tags: ["Light", "3d", "Abstract", "Purple", "Blue", "Orange"],
+    date: 1735575789800,
   },
 ];
 
