@@ -52,16 +52,17 @@ function App() {
   };
 
   return (
-    <div className={"App" + (isMobile ? " mobile" : "")}ref={appRef}>
+    <div className={"App" + (isMobile ? " mobile" : "")} ref={appRef}>
       <Projector image={projectedImage} onClick={handleProjectorClick} />
       <div className="hero">
         <div className="container">
-          <h1>Reflective Void</h1>
+          <h1>DISTANT VOID</h1>
         </div>
         <div
           className="heroImage"
           style={{ backgroundImage: `url("/images/grid.webp")` }}
         ></div>
+        <img className="logo" src="/images/logo.svg" />
       </div>
 
       <FilterBar

@@ -85,6 +85,10 @@ import gadget4 from "./images/gadget-4.png"
 import gadget5 from "./images/gadget-5.png"
 import gadget6 from "./images/gadget-6.png"
 import gadget7 from "./images/gadget-7.png"
+import flux from "./images/flux.png"
+import logoscape from "./images/logoscape.png"
+import swirl2 from "./images/swirl-2.png"
+import streak from "./images/streak.png"
 
 import novaThumbnail from "./thumbnails/nova.webp";
 import fluidThumbnail from "./thumbnails/fluid.webp";
@@ -164,15 +168,19 @@ import layersThumbnail from "./thumbnails/layers.webp"
 import inStreamThumbnail from "./thumbnails/in-stream.webp"
 import inStream2Thumbnail from "./thumbnails/in-stream-2.webp"
 import overcastThumbnail from "./thumbnails/overcast.webp"
-import catThumbnail  from "./thumbnails/cat.webp"
-import portalThumbnail  from "./thumbnails/portal.webp"
-import cellThumbnail  from "./thumbnails/cell.webp"
+import catThumbnail from "./thumbnails/cat.webp"
+import portalThumbnail from "./thumbnails/portal.webp"
+import cellThumbnail from "./thumbnails/cell.webp"
 import tunnelThumbnail from "./thumbnails/tunnel.webp"
-import lotus2Thumbnail  from "./thumbnails/lotus-2.webp"
-import gadget4Thumbnail  from "./thumbnails/gadget-4.webp"
-import gadget5Thumbnail  from "./thumbnails/gadget-5.webp"
-import gadget6Thumbnail  from "./thumbnails/gadget-6.webp"
-import gadget7Thumbnail  from "./thumbnails/gadget-7.webp"
+import lotus2Thumbnail from "./thumbnails/lotus-2.webp"
+import gadget4Thumbnail from "./thumbnails/gadget-4.webp"
+import gadget5Thumbnail from "./thumbnails/gadget-5.webp"
+import gadget6Thumbnail from "./thumbnails/gadget-6.webp"
+import gadget7Thumbnail from "./thumbnails/gadget-7.webp"
+import fluxThumbnail from "./thumbnails/flux.webp"
+import logoscapeThumbnail from "./thumbnails/logoscape.webp"
+import swirl2Thumbnail from "./thumbnails/swirl-2.webp"
+import streakThumbnail from "./thumbnails/streak.webp"
 
 import { Wallpaper, Filter } from "./types";
 
@@ -791,6 +799,34 @@ const wallpapers: Wallpaper[] = [
     thumbnail: gadget7Thumbnail,
     tags: ["Light", "3d", "Abstract", "Purple", "Blue", "Orange"],
     date: 1735575789800,
+  },
+  {
+    name: "flux",
+    src: flux,
+    thumbnail: fluxThumbnail,
+    tags: ["Dark", "Illustration", "Abstract", "Yellow"],
+    date: 1736126375089,
+  },
+  {
+    name: "logoscape",
+    src: logoscape,
+    thumbnail: logoscapeThumbnail,
+    tags: ["Dark", "Illustration", "Abstract", "Nature", "Green", "Blue"],
+    date: 1736126375189,
+  },
+  {
+    name: "swirl-2",
+    src: swirl2,
+    thumbnail: swirl2Thumbnail,
+    tags: ["Dark", "Illustration", "Abstract", "Nature", "Blue"],
+    date: 1736126375289,
+  },
+  {
+    name: "streak",
+    src: streak,
+    thumbnail: streakThumbnail,
+    tags: ["Dark", "3d", "Abstract", "Orange", "Blue"],
+    date: 1736126375389,
   },
 ];
 
