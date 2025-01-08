@@ -187,4 +187,9 @@ h1 {
   .hero {
     height: 400px;
   }
+
+  .logo{
+    width: 300px;
+    height: 225px;
+  }
 }
