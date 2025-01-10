@@ -71,33 +71,51 @@ html {
   left: 0;
 }
 
-h1 {
+.headerWrapper{
+  opacity: 0;
+}
+
+.headerWrapper.visible{
+  opacity: 1;
+  transition: opacity 0.3s linear;
+}
+
+.headerWrapper h1 {
   font-size: 3em;
   margin: 0;
   text-align: center;
-  background-image: linear-gradient(
-    to right,
-    var(--text-color) 33%,
-    white,
-    var(--text-color) 66%
-  );
+  background-image: linear-gradient(to right,
+      var(--text-color) 33%,
+      white,
+      var(--text-color) 66%);
   color: transparent;
   background-clip: text;
   background-size: 600% 100%;
   background-position-x: 100%;
   animation: headerSweep 6s ease-in-out infinite;
-  letter-spacing: 24px;
+  letter-spacing: 8px;
   overflow-wrap: anywhere;
   white-space: break-spaces;
+  transition: letter-spacing 1s cubic-bezier(0.05, 0.7, 0.1, 1.0);
 }
 
-.logo{
+.headerWrapper.visible h1{
+  letter-spacing: 24px;
+}
+
+.logo {
   width: 400px;
   height: 250px;
   z-index: 2;
   position: absolute;
 }
 
+.lottie {
+  width: 400px;
+  height: 400px;
+  z-index: 2;
+  position: absolute;
+}
 
 .zero {
   color: var(--text-color);
@@ -149,11 +167,9 @@ h1 {
 .mobile .gloss::before {
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  background: linear-gradient(
-    to bottom right,
-    var(--gray),
-    color-mix(in srgb, var(--gray), transparent 80%)
-  );
+  background: linear-gradient(to bottom right,
+      var(--gray),
+      color-mix(in srgb, var(--gray), transparent 80%));
 }
 
 @keyframes headerSweep {
@@ -188,7 +204,7 @@ h1 {
     height: 400px;
   }
 
-  .logo{
+  .logo {
     width: 300px;
     height: 187.5px;
   }

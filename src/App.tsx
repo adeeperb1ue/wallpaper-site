@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { app } from "./firebase";
 import { isMobile } from 'react-device-detect';
+
 import "./App.css";
 
 import GlowImage from "./components/glow-image/glow-image";
@@ -10,6 +11,7 @@ import { Wallpaper, Filter } from "./image-manager/types";
 import ImageManager from "./image-manager/image-manager";
 import AllFilters from "./image-manager/filters";
 import FilterBar from "./components/filter-bar/filter-bar";
+import Hero from "./components/hero/hero";
 
 const imageManager = new ImageManager(AllFilters);
 function App() {
@@ -22,6 +24,8 @@ function App() {
     imageManager.getImages()
   );
   const [projectedImage, setProjectedImage] = useState<Wallpaper | null>(null);
+
+
 
   const checkUrl = () => {
     const path = location.pathname;
@@ -54,16 +58,8 @@ function App() {
   return (
     <div className={"App" + (isMobile ? " mobile" : "")} ref={appRef}>
       <Projector image={projectedImage} onClick={handleProjectorClick} />
-      <div className="hero">
-        <div className="container">
-          <h1>DISTANT VOID</h1>
-        </div>
-        <div
-          className="heroImage"
-          style={{ backgroundImage: `url("/images/grid.webp")` }}
-        ></div>
-        <img className="logo" src="/images/logo.svg" />
-      </div>
+
+      <Hero />
 
       <FilterBar
         filters={filters}
