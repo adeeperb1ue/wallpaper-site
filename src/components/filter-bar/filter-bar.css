@@ -12,12 +12,14 @@
 }
 
 .filtersWrapper {
+  position: relative;
   border-radius: 32px;
   box-sizing: border-box;
   padding: 16px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  max-width: 100%;
 }
 
 .filterChip {

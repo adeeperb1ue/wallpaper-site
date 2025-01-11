@@ -1,8 +1,11 @@
 import {
   Filter,
   isColorTag,
+  isStyleTag,
+  isThemeTag,
   ModeTag,
 } from "../../image-manager/types";
+import { DropDownButton } from "../drop-down-button/drop-down-button";
 
 import {
   ColorToggleButton,
@@ -29,6 +32,33 @@ function FilterBar({ filters, onChange }: FilterBarProps) {
 
     onChange(copy);
   };
+
+  const handleStyleClick = (changedFilter: Filter) => {
+    const copy = [...filters];
+    for (const filter of filters) {
+      if (filter.tag === changedFilter.tag) {
+        filter.active = !changedFilter.active;
+      }
+      else {
+        filter.active = false;
+      }
+    }
+
+    onChange(copy);
+  }
+
+  const handleThemeClick = (changedFilter: Filter) => {
+    const copy = [...filters];
+    for (const filter of filters) {
+      if (filter.tag === changedFilter.tag) {
+        filter.active = !changedFilter.active;
+        break;
+      }
+    }
+
+    onChange(copy);
+  }
+
 
   const handleModeClick = (mode: ModeTag | null) => {
 
@@ -59,9 +89,24 @@ function FilterBar({ filters, onChange }: FilterBarProps) {
 
   return (
     <div className={"filterBar "}>
-      <div className="containerGrid" style={{ display: "flex" }}>
+      <div className="containerGrid" style={{ display: "flex", justifyContent: "center"}}>
         <div className="filtersWrapper gloss">
           <ModeToggleButton mode={mode} onClick={handleModeClick} />
+          <DropDownButton
+            values={filters.filter((filter) => {
+              return isStyleTag(filter.tag)
+            })}
+            text={"Style"}
+            onChange={handleStyleClick}
+          />
+          <DropDownButton
+            values={filters.filter((filter) => {
+              return isThemeTag(filter.tag)
+            })}
+            text={"Themes"}
+            onChange={handleThemeClick}
+            multiSelect
+          />
           {filters.map((filter) => {
             if (isColorTag(filter.tag)) {
               return (
@@ -76,14 +121,6 @@ function FilterBar({ filters, onChange }: FilterBarProps) {
             else if (filter.tag === "Dark" || filter.tag === "Light") {
               return null;
             }
-            return (
-              <TextToggleButton
-                key={filter.tag}
-                text={filter.tag}
-                active={filter.active}
-                onClick={() => handleClick(filter)}
-              />
-            );
           })}
         </div>
       </div>

@@ -42,7 +42,8 @@ export default function Hero() {
     return (<div className="hero">
         <div className="container">
             <div className={"headerWrapper" + (animationDone ? " visible" : "")}>
-                <h1>DISTANT VOID</h1>
+                <h1 className='large'>DISTANT VOID</h1>
+                <h1 className='small'>DISTANT<br/>VOID</h1>
             </div>
         </div>
         <div
@@ -51,8 +52,6 @@ export default function Hero() {
         ></div>
         <div className="lottie">
             <Lottie options={defaultOptions}
-                height={400}
-                width={400}
                 ref={lottieRef}
             />
         </div>

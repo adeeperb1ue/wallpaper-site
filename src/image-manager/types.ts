@@ -40,6 +40,19 @@ export interface Filter {
   tag: Tag;
   active: boolean;
   passes: (arg0: Wallpaper) => boolean;
+  icon?: string;
+}
+
+
+export const tagToIcon:{[key:string]: string} = {
+  "Photo": "photo",
+  "3d": "deployed_code",
+  "Illustration": "polyline",
+  "Painting": "brush",
+  "Abstract": "switch_access",
+  "Nature": "eco",
+  "City": "location_city",
+  "Space": "planet"
 }
 
 export const colorTagToHex: {[key: string]: string;} = {
@@ -60,3 +73,17 @@ export function isColorTag(tag: Tag): tag is ColorTag {
   }
   return false;
 }
+
+export function isStyleTag(tag: Tag): tag is StyleTag {
+  for(const style of Styles){
+    if(tag === style) return true;
+  }
+  return false;
+} 
+
+export function isThemeTag(tag: Tag): tag is ThemeTag {
+  for(const theme of Themes){
+    if(tag === theme) return true;
+  }
+  return false;
+} 

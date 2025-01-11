@@ -1,7 +1,5 @@
-import { AllTags, Filter } from "./types";
+import { AllTags, Filter, tagToIcon } from "./types";
 import { Wallpaper } from "./types";
-
-
 
 const AllFilters: Filter[] = [];
 
@@ -11,7 +9,8 @@ for(const tag of AllTags){
         active: false,
         passes: (wallpaper: Wallpaper) => {
             return wallpaper.tags.includes(tag)
-        }
+        },
+        icon: (tag in tagToIcon ? tagToIcon[tag] : undefined),
     }
 
     AllFilters.push(filter)
