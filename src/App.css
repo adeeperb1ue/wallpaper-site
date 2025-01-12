@@ -92,6 +92,9 @@ html {
 .mobile .gloss::before {
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
+  box-shadow: inset 2px 4px 16px 0 hsla(0, 0%, 97%, 0.06),
+    0 24px 24px -16px rgba(5, 5, 5, 0.09), 0 6px 13px 0 rgba(5, 5, 5, 0.1),
+    0 6px 4px -4px rgba(5, 5, 5, 0.2), 0 5px 1.5px -4px rgba(5, 5, 5, 0.65);
   background: linear-gradient(to bottom right,
       var(--gray),
       color-mix(in srgb, var(--gray), transparent 80%));
