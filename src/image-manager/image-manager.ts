@@ -182,15 +182,14 @@ import logoscapeThumbnail from "./thumbnails/logoscape.webp"
 import swirl2Thumbnail from "./thumbnails/swirl-2.webp"
 import streakThumbnail from "./thumbnails/streak.webp"
 
-import { Wallpaper, Filter } from "./types";
+import { Wallpaper, Filter, Order } from "./types";
 
 const devMode = !process.env.NODE_ENV || process.env.NODE_ENV === "development";
-console.log("dev mode?", devMode);
 
 const url =
   "https://firebasestorage.googleapis.com/v0/b/reflective-void.firebasestorage.app/o";
 
-const wallpapers: Wallpaper[] = [
+const allWallPapers: Wallpaper[] = [
   {
     name: "skyline",
     src: skyline,
@@ -831,7 +830,7 @@ const wallpapers: Wallpaper[] = [
 ];
 
 if (!devMode) {
-  for (const wallpaper of wallpapers) {
+  for (const wallpaper of allWallPapers) {
     wallpaper.thumbnail = `https://cdn.jsdelivr.net/gh/adeeperb1ue/wallpaper-site/src/image-manager/thumbnails/${encodeURIComponent(
       wallpaper.name
     )}.webp`
@@ -841,31 +840,5 @@ if (!devMode) {
   }
 }
 
-export default class ImageManager {
-  images: Wallpaper[];
-  filters: Filter[];
 
-  constructor(filters: Filter[]) {
-    this.filters = filters;
-    this.images = wallpapers.sort((a, b) => b.date - a.date);
-  }
-
-  getImages(): Wallpaper[] {
-    return this.filter();
-  }
-
-  sort() { }
-
-  filter() {
-    return this.images.filter((wallpaper) => this.passesAllFilters(wallpaper));
-  }
-
-  private passesAllFilters(wallpaper: Wallpaper): Boolean {
-    for (const filter of this.filters) {
-      if (!filter.active) continue;
-      if (!filter.passes(wallpaper)) return false;
-    }
-
-    return true;
-  }
-}
+export default allWallPapers;

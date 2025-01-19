@@ -6,6 +6,7 @@ export interface IconButtonProps {
     icon: string;
     active?: boolean;
     className?: string;
+    outlined?: boolean;
     onClick: () => void;
   }
 
@@ -46,11 +47,12 @@ export function IconButton({
     icon,
     className,
     active,
+    outlined = false,
     onClick,
   }: IconButtonProps) {
     return (
       <button
-        className={"toggleButton gloss icon" + (className ? ` ${className}` : "") + (active ? " active" : "")}
+        className={"toggleButton gloss icon" + (className ? ` ${className}` : "") + (active ? " active" : "") + (outlined ? " outlined" : "")}
         onClick={onClick}
       >
         <div className="state"></div>

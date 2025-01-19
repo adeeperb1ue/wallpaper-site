@@ -1,11 +1,13 @@
 import {
+  allOrders,
   Filter,
   isColorTag,
   isStyleTag,
   isThemeTag,
   ModeTag,
+  Order,
 } from "../../image-manager/types";
-import { DropDownButton } from "../drop-down-button/drop-down-button";
+import { DropDownButton, DropDownButtonValue } from "../drop-down-button/drop-down-button";
 
 import {
   ColorToggleButton,
@@ -16,12 +18,20 @@ import "./filter-bar.css";
 
 export interface FilterBarProps {
   filters: Filter[];
-  onChange: (filters: Filter[]) => void;
+  sortOrder: Order;
+  onFiltersChange: (filters: Filter[]) => void;
+  onSortOrderChange: (sortOrder: Order) => void;
 }
 
-function FilterBar({ filters, onChange }: FilterBarProps) {
+function FilterBar({ filters, sortOrder, onFiltersChange, onSortOrderChange }: FilterBarProps) {
 
-  const handleClick = (changedFilter: Filter) => {
+  const handleSortClick = (changedValue : DropDownButtonValue) => {
+    if(changedValue.value !== sortOrder){
+      onSortOrderChange(changedValue.value as Order);
+    }
+  }
+
+  const handleColorClick = (changedFilter: Filter) => {
     const copy = [...filters];
     for (const filter of filters) {
       if (filter.tag === changedFilter.tag) {
@@ -30,35 +40,35 @@ function FilterBar({ filters, onChange }: FilterBarProps) {
       }
     }
 
-    onChange(copy);
+    onFiltersChange(copy);
   };
 
-  const handleStyleClick = (changedFilter: Filter) => {
+
+  const handleStyleClick = (changedValue: DropDownButtonValue) => {
     const copy = [...filters];
     for (const filter of filters) {
-      if (filter.tag === changedFilter.tag) {
-        filter.active = !changedFilter.active;
+      if (filter.tag === changedValue.value) {
+        filter.active = !changedValue.active;
       }
       else {
         filter.active = false;
       }
     }
 
-    onChange(copy);
+    onFiltersChange(copy);
   }
 
-  const handleThemeClick = (changedFilter: Filter) => {
+  const handleThemeClick = (changedValue: DropDownButtonValue) => {
     const copy = [...filters];
     for (const filter of filters) {
-      if (filter.tag === changedFilter.tag) {
-        filter.active = !changedFilter.active;
+      if (filter.tag === changedValue.value) {
+        filter.active = !changedValue.active;
         break;
       }
     }
 
-    onChange(copy);
+    onFiltersChange(copy);
   }
-
 
   const handleModeClick = (mode: ModeTag | null) => {
 
@@ -72,7 +82,7 @@ function FilterBar({ filters, onChange }: FilterBarProps) {
       }
     }
 
-    onChange(copy);
+    onFiltersChange(copy);
   }
 
   let mode: ModeTag | null = null;
@@ -87,25 +97,60 @@ function FilterBar({ filters, onChange }: FilterBarProps) {
     }
   }
 
+  const styleOptions: DropDownButtonValue[] = [];
+  for (const filter of filters) {
+    if (isStyleTag(filter.tag)) {
+      styleOptions.push({
+        value: filter.tag,
+        text: filter.tag,
+        active: filter.active,
+        icon: filter.icon || "3d",
+      })
+    }
+  }
+
+  const themeOptions: DropDownButtonValue[] = [];
+  for (const filter of filters) {
+    if (isThemeTag(filter.tag)) {
+      themeOptions.push({
+        value: filter.tag,
+        text: filter.tag,
+        active: filter.active,
+        icon: filter.icon || "3d",
+      })
+    }
+  }
+
+  const sortOrderOptions: DropDownButtonValue[] = []
+  for(const order of allOrders){
+    sortOrderOptions.push({
+      value: order,
+        text: order,
+        active: order === sortOrder,
+        icon: "3d",
+    })
+  }
+
   return (
     <div className={"filterBar "}>
-      <div className="containerGrid" style={{ display: "flex", justifyContent: "center"}}>
+      <div className="containerGrid" style={{ display: "flex", justifyContent: "center" }}>
         <div className="filtersWrapper gloss">
           <ModeToggleButton mode={mode} onClick={handleModeClick} />
           <DropDownButton
-            values={filters.filter((filter) => {
-              return isStyleTag(filter.tag)
-            })}
+            values={styleOptions}
             text={"Style"}
             onChange={handleStyleClick}
           />
           <DropDownButton
-            values={filters.filter((filter) => {
-              return isThemeTag(filter.tag)
-            })}
+            values={themeOptions}
             text={"Themes"}
             onChange={handleThemeClick}
             multiSelect
+          />
+          <DropDownButton
+            values={sortOrderOptions}
+            text={"Sort By"}
+            onChange={handleSortClick}
           />
           {filters.map((filter) => {
             if (isColorTag(filter.tag)) {
@@ -114,7 +159,7 @@ function FilterBar({ filters, onChange }: FilterBarProps) {
                   key={filter.tag}
                   color={filter.tag}
                   active={filter.active}
-                  onClick={() => handleClick(filter)}
+                  onClick={() => handleColorClick(filter)}
                 />
               );
             }

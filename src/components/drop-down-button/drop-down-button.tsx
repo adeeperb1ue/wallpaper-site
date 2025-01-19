@@ -1,14 +1,20 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { TextToggleButton } from "../toggle-button/toggle-button";
 
 import "./drop-down-button.css"
 import useClickOutside from "../../hooks/use-click-outside";
-import { Filter } from "../../image-manager/types";
+
+export interface DropDownButtonValue {
+    value: string,
+    text: string,
+    active: boolean,
+    icon: string,
+}
 
 export interface DropDownButtonProps {
-    values: Filter[];
+    values: DropDownButtonValue[];
     text: string;
-    onChange: (value: Filter) => void;
+    onChange: (value: DropDownButtonValue) => void;
     multiSelect?: boolean
 }
 
@@ -22,7 +28,7 @@ export function DropDownButton({ values, text, onChange, multiSelect }: DropDown
         textToUse = `${active.length} ${text}${text.endsWith("s") ? "" : "s"}`
     }
     else if (active.length === 1) {
-        textToUse = active[0].tag;
+        textToUse = active[0].text;
     }
 
     return (
@@ -32,13 +38,13 @@ export function DropDownButton({ values, text, onChange, multiSelect }: DropDown
             }} />
             {open && <div className="menu">
 
-                {values.map((filter: Filter) => (
-                    <div className={"menuItem" + (filter.active ? " active" : "")} onClick={() => {
+                {values.map((value: DropDownButtonValue) => (
+                    <div className={"menuItem" + (value.active ? " active" : "")} onClick={() => {
                         if (!multiSelect) setOpen(false);
-                        onChange(filter);
+                        onChange(value);
                     }}>
-                        <span className="material-symbols-outlined">{filter.active ? "check" : filter.icon}</span>
-                        <div className="menuText">{filter.tag}</div>
+                        <span className="material-symbols-outlined">{value.active ? "check" : value.icon}</span>
+                        <div className="menuText">{value.text}</div>
                     </div>
                 ))}
 

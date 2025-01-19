@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import { useCookies } from "react-cookie";
 import { Wallpaper } from "../../image-manager/types";
 import { IconButton } from "../toggle-button/toggle-button";
 import "./projector.css";
 import imageSize from "image-size";
+import { decreaseHeart, increaseHeart, logDownload, logView } from "../../firebase";
 
 export interface ProjectorProps {
   image: Wallpaper | null;
@@ -26,7 +28,8 @@ const resizeImage = () => {
   // Calculate possible new dimensions based on the aspect ratio
   let newWidth, newHeight;
 
-  if (windowWidth / windowHeight < aspectRatio) {;
+  if (windowWidth / windowHeight < aspectRatio) {
+    ;
     // Width is the limiting factor
     newWidth = windowWidth;
     newHeight = newWidth / aspectRatio;
@@ -53,9 +56,16 @@ const resizeImage = () => {
 };
 
 function Projector({ image, onClick }: ProjectorProps) {
+  const [cookies, setCookie, removeCookie] = useCookies(['hearted']);
   const [imageDimensions, setImageDimensions] = useState(resizeImage());
   const [status, setStatus] = useState("loading");
   const targetRef = useRef(null);
+
+  useEffect(() => {
+    if (image) {
+      logView(image.name)
+    }
+  }, [image]);
 
   useEffect(() => {
     // Add the resize event listener
@@ -72,11 +82,11 @@ function Projector({ image, onClick }: ProjectorProps) {
   }, []);
 
   useEffect(() => {
-    if(targetRef.current){
+    if (targetRef.current) {
       console.log("locking");
       disableBodyScroll(targetRef.current);
     }
-    else{
+    else {
       console.log("unlocking")
       clearAllBodyScrollLocks();
     }
@@ -93,7 +103,27 @@ function Projector({ image, onClick }: ProjectorProps) {
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
+
+    logDownload(image.name);
   };
+
+  const heart = () => {
+    console.log(cookies);
+    const map = cookies["hearted"] || {};
+
+    if (image && image.name in map) {
+      delete map[image.name];
+      decreaseHeart(image.name);
+    }
+    else {
+      map[image.name] = "1";
+      increaseHeart(image.name);
+    }
+
+    setCookie("hearted", map);
+  }
+
+  const hearted = ("hearted" in cookies) && (image.name in cookies["hearted"]);
 
   return (
     <div
@@ -109,6 +139,12 @@ function Projector({ image, onClick }: ProjectorProps) {
             onClick={onClick}
           />
           <h3>{image.name}</h3>
+          <IconButton
+            outlined={!hearted}
+            className="heartButton"
+            icon={"favorite"}
+            onClick={heart}
+          />
           <IconButton
             className="downloadButton"
             icon={"download"}
