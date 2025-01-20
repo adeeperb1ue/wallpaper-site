@@ -12,6 +12,7 @@ export interface IconButtonProps {
 
 export interface TextToggleButtonProps {
   text: string;
+  icon?: string;
   active: boolean;
   onClick: (active: boolean) => void;
 }
@@ -29,6 +30,7 @@ export interface ModeToggleButtonProps {
 
 export function TextToggleButton({
   text,
+  icon,
   active,
   onClick,
 }: TextToggleButtonProps) {
@@ -38,6 +40,7 @@ export function TextToggleButton({
       onClick={() => onClick(true)}
     >
       <div className="state"></div>
+      {icon && <span className="material-symbols-outlined topLevelIcon">{icon}</span>}
       <span className="text">{text}</span>
     </button>
   );

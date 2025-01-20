@@ -6,6 +6,7 @@ import {
   isThemeTag,
   ModeTag,
   Order,
+  orderToIcon,
 } from "../../image-manager/types";
 import { DropDownButton, DropDownButtonValue } from "../drop-down-button/drop-down-button";
 
@@ -25,8 +26,8 @@ export interface FilterBarProps {
 
 function FilterBar({ filters, sortOrder, onFiltersChange, onSortOrderChange }: FilterBarProps) {
 
-  const handleSortClick = (changedValue : DropDownButtonValue) => {
-    if(changedValue.value !== sortOrder){
+  const handleSortClick = (changedValue: DropDownButtonValue) => {
+    if (changedValue.value !== sortOrder) {
       onSortOrderChange(changedValue.value as Order);
     }
   }
@@ -116,18 +117,18 @@ function FilterBar({ filters, sortOrder, onFiltersChange, onSortOrderChange }: F
         value: filter.tag,
         text: filter.tag,
         active: filter.active,
-        icon: filter.icon || "3d",
+        icon: filter.icon || "deployed_cube"
       })
     }
   }
 
   const sortOrderOptions: DropDownButtonValue[] = []
-  for(const order of allOrders){
+  for (const order of allOrders) {
     sortOrderOptions.push({
       value: order,
-        text: order,
-        active: order === sortOrder,
-        icon: "3d",
+      text: order,
+      active: order === sortOrder,
+      icon: orderToIcon[order] || "deployed_cube"
     })
   }
 
@@ -139,6 +140,7 @@ function FilterBar({ filters, sortOrder, onFiltersChange, onSortOrderChange }: F
           <DropDownButton
             values={styleOptions}
             text={"Style"}
+            showIcon
             onChange={handleStyleClick}
           />
           <DropDownButton
@@ -150,6 +152,7 @@ function FilterBar({ filters, sortOrder, onFiltersChange, onSortOrderChange }: F
           <DropDownButton
             values={sortOrderOptions}
             text={"Sort By"}
+            showIcon
             onChange={handleSortClick}
           />
           {filters.map((filter) => {

@@ -726,7 +726,7 @@ const allWallPapers: Wallpaper[] = [
     name: "in-stream-2",
     src: inStream2,
     thumbnail: inStream2Thumbnail,
-    tags: ["Dark", "Abstract", "3d", "White", "Blue", "Orange"],
+    tags: ["Dark", "Abstract", "3d", "Blue", "Orange"],
     date: 1735575785789,
   },
   {
@@ -768,7 +768,7 @@ const allWallPapers: Wallpaper[] = [
     name: "lotus-2",
     src: lotus2,
     thumbnail: lotus2Thumbnail,
-    tags: ["Dark", "Nature", "Green", "Orange", "Illustration"],
+    tags: ["Dark", "Nature", "Green", "Pink", "Illustration"],
     date: 1735575789400,
   },
   {

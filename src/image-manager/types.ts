@@ -63,6 +63,13 @@ export const tagToIcon: { [key: string]: string } = {
   "Space": "planet"
 }
 
+export const orderToIcon: { [key: string]: string } = {
+  "Recent": "schedule",
+  'Views': "visibility",
+  "Hearts": "favorite",
+  "Downloads": "download"
+}
+
 export const colorTagToHex: { [key: string]: string; } = {
   "Red": "#ffa8a8",
   "Blue": "#92cef7",

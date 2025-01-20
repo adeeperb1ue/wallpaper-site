@@ -45,29 +45,42 @@ function App() {
 
   const sortWallpapers = (a: Wallpaper, b: Wallpaper): number => {
     if (stats && sortOrder === Order.DOWNLOADS) {
-      const aDownloads = stats.downloads[a.name] || 0;
-      const bDownloads = stats.downloads[b.name] || 0;
+      const aStat = stats.downloads[a.name] || null;
+      const bStat = stats.downloads[b.name] || null;
 
-      return bDownloads - aDownloads;
+      if (aStat !== null && bStat === null) return -1;
+      else if (aStat == null && bStat !== null) return 1;
+      else if (aStat === null && bStat === null) return b.date - a.date;
+      else if (aStat !== null && bStat !== null) {
+        return bStat - aStat;
+      }
     }
     else if (stats && sortOrder === Order.HEARTS) {
-      const aHearts = stats.hearts[a.name] || 0;
-      const bHearts = stats.hearts[b.name] || 0;
+      const aStat = stats.hearts[a.name] || null;
+      const bStat = stats.hearts[b.name] || null;
 
-      return bHearts - aHearts;
+      if (aStat !== null && bStat === null) return -1;
+      else if (aStat == null && bStat !== null) return 1;
+      else if (aStat === null && bStat === null) return b.date - a.date;
+      else if (aStat !== null && bStat !== null) {
+        return bStat - aStat;
+      }
     }
     else if (stats && sortOrder === Order.VIEWS) {
-      const aViews = stats.views[a.name] || 0;
-      const bViews = stats.views[b.name] || 0;
+      const aStat = stats.views[a.name] || null;
+      const bStat = stats.views[b.name] || null;
 
-      return bViews - aViews;
+      if (aStat !== null && bStat === null) return -1;
+      else if (aStat == null && bStat !== null) return 1;
+      else if (aStat === null && bStat === null) return b.date - a.date;
+      else if (aStat !== null && bStat !== null) {
+        return bStat - aStat;
+      }
 
     }
-    else {
-      return b.date - a.date;
-    }
 
-    return 0;
+    return b.date - a.date;
+
   }
 
   //Login to firebase

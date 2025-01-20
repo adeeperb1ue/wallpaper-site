@@ -51,7 +51,8 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 64px;
+  height: 256px;
+  padding-bottom: 64px;
 }
 
 .gloss::before {

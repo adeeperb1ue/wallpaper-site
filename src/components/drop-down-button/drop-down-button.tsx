@@ -15,10 +15,11 @@ export interface DropDownButtonProps {
     values: DropDownButtonValue[];
     text: string;
     onChange: (value: DropDownButtonValue) => void;
-    multiSelect?: boolean
+    multiSelect?: boolean,
+    showIcon?: boolean,
 }
 
-export function DropDownButton({ values, text, onChange, multiSelect }: DropDownButtonProps) {
+export function DropDownButton({ values, text, onChange, multiSelect, showIcon }: DropDownButtonProps) {
     const [open, setOpen] = useState(false);
     const ref = useClickOutside(() => setOpen(false));
 
@@ -30,12 +31,19 @@ export function DropDownButton({ values, text, onChange, multiSelect }: DropDown
     else if (active.length === 1) {
         textToUse = active[0].text;
     }
+    const icon = showIcon && active.length ? active[0].icon : undefined;
+
+
 
     return (
-        <div className="dropDownWrapper" ref={ref}>
-            <TextToggleButton text={textToUse} active={values.filter(value => value.active).length > 0} onClick={() => {
-                setOpen(!open)
-            }} />
+        <div className={"dropDownWrapper" + (open ? " menuOpen" : "")} ref={ref}>
+            <TextToggleButton
+                text={textToUse}
+                icon={icon}
+                active={values.filter(value => value.active).length > 0}
+                onClick={() => {
+                    setOpen(!open)
+                }} />
             {open && <div className="menu">
 
                 {values.map((value: DropDownButtonValue) => (
