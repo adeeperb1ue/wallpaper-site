@@ -89,6 +89,16 @@ import flux from "./images/flux.png"
 import logoscape from "./images/logoscape.png"
 import swirl2 from "./images/swirl-2.png"
 import streak from "./images/streak.png"
+import car from "./images/car.png"
+import fold from "./images/fold.png"
+import paint from "./images/paint.png"
+import paint2 from "./images/paint-2.png"
+import relic3 from "./images/relic-3.png"
+import tower from "./images/tower.png"
+import stilts from "./images/stilts.png"
+import flowers from "./images/flowers.png"
+import fold2 from "./images/fold-2.png"
+import smear from "./images/smear.png"
 
 import novaThumbnail from "./thumbnails/nova.webp";
 import fluidThumbnail from "./thumbnails/fluid.webp";
@@ -181,6 +191,16 @@ import fluxThumbnail from "./thumbnails/flux.webp"
 import logoscapeThumbnail from "./thumbnails/logoscape.webp"
 import swirl2Thumbnail from "./thumbnails/swirl-2.webp"
 import streakThumbnail from "./thumbnails/streak.webp"
+import carThumbnail from "./thumbnails/car.webp";
+import foldThumbnail from "./thumbnails/fold.webp"
+import paintThumbnail from "./thumbnails/paint.webp"
+import paint2Thumbnail from "./thumbnails/paint-2.webp"
+import relic3Thumbnail from "./thumbnails/relic-3.webp"
+import towerThumbnail from "./thumbnails/tower.webp"
+import stiltsThumbnail from "./thumbnails/stilts.webp"
+import flowersThumbnail from "./thumbnails/flowers.webp"
+import fold2Thumbnail from "./thumbnails/fold-2.webp"
+import smearThumbnail from "./thumbnails/smear.webp"
 
 import { Wallpaper, Filter, Order } from "./types";
 
@@ -826,6 +846,76 @@ const allWallPapers: Wallpaper[] = [
     thumbnail: streakThumbnail,
     tags: ["Dark", "3d", "Abstract", "Orange", "Blue"],
     date: 1736126375389,
+  },
+  {
+    name: "car",
+    src: car,
+    thumbnail: carThumbnail,
+    tags: ["Photo", "Space", "Illustration", "Red", "Blue", "Purple", "Dark"],
+    date: 1739155482095,
+  },
+  {
+    name: "fold",
+    src: fold,
+    thumbnail: foldThumbnail,
+    tags: ["Light", "Abstract", "3d", "Red", "Pink", "Blue", "Purple", "Orange"],
+    date: 1739155482195,
+  },
+  {
+    name: "paint",
+    src: paint,
+    thumbnail: paintThumbnail,
+    tags: ["Dark", "Abstract", "Photo", "Red", ],
+    date: 1739155482295,
+  },
+  {
+    name: "paint-2",
+    src: paint2,
+    thumbnail: paint2Thumbnail,
+    tags: ["Light", "Abstract", "Photo", "Pink", "Pink", "Blue", "Yellow"],
+    date: 1739155482395,
+  },
+  {
+    name: "relic-3",
+    src: relic3,
+    thumbnail: relic3Thumbnail,
+    tags: ["Light", "Abstract", "3d", "Yellow"],
+    date: 1739155482495,
+  },
+  {
+    name: "tower",
+    src: tower,
+    thumbnail: towerThumbnail,
+    tags: ["Dark", "Illustration", "City", "Blue", "Yellow"],
+    date: 1739155482595,
+  },
+  {
+    name: "stilts",
+    src: stilts,
+    thumbnail: stiltsThumbnail,
+    tags: ["Light", "Painting", "City", "Nature", "Blue"],
+    date: 1739155482695,
+  },
+  {
+    name: "flowers",
+    src: flowers,
+    thumbnail: flowersThumbnail,
+    tags: ["Light", "Illustration", "Nature", "Blue", "Pink", "Yellow"],
+    date: 1739155482795,
+  },
+  {
+    name: "fold-2",
+    src: fold2,
+    thumbnail: fold2Thumbnail,
+    tags: ["Dark", "Illustration", "Abstract", "Blue", "Orange"],
+    date: 1739155482895,
+  },
+  {
+    name: "smear",
+    src: smear,
+    thumbnail: smearThumbnail,
+    tags: ["Light", "3d", "Abstract", "Blue", "Purple"],
+    date: 1739155482995,
   },
 ];
 
