@@ -99,6 +99,13 @@ import stilts from "./images/stilts.png"
 import flowers from "./images/flowers.png"
 import fold2 from "./images/fold-2.png"
 import smear from "./images/smear.png"
+import curves from "./images/curves.png"
+import dream from "./images/dream.png"
+import chips from "./images/chips.png"
+import droplets2 from "./images/droplets-2.png";
+import fade from  "./images/fade.png";
+import quartz from "./images/quartz.png"
+import rocks from "./images/rocks.png"
 
 import novaThumbnail from "./thumbnails/nova.webp";
 import fluidThumbnail from "./thumbnails/fluid.webp";
@@ -201,6 +208,13 @@ import stiltsThumbnail from "./thumbnails/stilts.webp"
 import flowersThumbnail from "./thumbnails/flowers.webp"
 import fold2Thumbnail from "./thumbnails/fold-2.webp"
 import smearThumbnail from "./thumbnails/smear.webp"
+import curvesThumbnail from "./thumbnails/curves.webp"
+import dreamThumbnail from "./thumbnails/dream.webp"
+import chipsThumbnail  from "./thumbnails/chips.webp"
+import droplets2Thumbnail  from "./thumbnails/droplets-2.webp";
+import fadeThumbnail  from  "./thumbnails/fade.webp";
+import quartzThumbnail  from "./thumbnails/quartz.webp"
+import rocksThumbnail  from "./thumbnails/rocks.webp"
 
 import { Wallpaper, Filter, Order } from "./types";
 
@@ -916,6 +930,55 @@ const allWallPapers: Wallpaper[] = [
     thumbnail: smearThumbnail,
     tags: ["Light", "3d", "Abstract", "Blue", "Purple"],
     date: 1739155482995,
+  },
+  {
+    name: "curves",
+    src: curves,
+    thumbnail: curvesThumbnail,
+    tags: ["Light", "Illustration", "Abstract", "Blue", "Purple"],
+    date: 1739861427693,
+  },
+  {
+    name: "dream",
+    src: dream,
+    thumbnail: dreamThumbnail,
+    tags: ["Light", "Photo", "Nature", "Yellow", "Orange"],
+    date: 1739861427793,
+  },
+  {
+    name: "chips",
+    src: chips,
+    thumbnail: chipsThumbnail,
+    tags: ["Dark", "Abstract", "3d", "Blue", "Purple", "Black"],
+    date: 1740719536047,
+  },
+  {
+    name: "droplets-2",
+    src: droplets2,
+    thumbnail: droplets2,
+    tags: ["Dark", "Abstract", "3d", "Red", "Purple"],
+    date: 1740719536087,
+  },
+  {
+    name: "fade",
+    src: fade,
+    thumbnail: fade,
+    tags: ["Light", "Abstract", "3d", "Orange", "White", "Purple"],
+    date: 1740719536187,
+  },
+  {
+    name: "quartz",
+    src: quartz,
+    thumbnail: quartzThumbnail,
+    tags: ["Dark", "Abstract", "3d", "Black", "Blue", "Purple"],
+    date: 1740719536287,
+  },
+  {
+    name: "rocks",
+    src: rocks,
+    thumbnail: rocksThumbnail,
+    tags: ["Dark", "Abstract", "3d", "Black", "Purple"],
+    date: 1740719536387,
   },
 ];
 
