@@ -106,6 +106,12 @@ import droplets2 from "./images/droplets-2.png";
 import fade from  "./images/fade.png";
 import quartz from "./images/quartz.png"
 import rocks from "./images/rocks.png"
+import flow2 from "./images/flow-2.png"
+import drone from "./images/drone.png"
+import o2 from "./images/O-2.png"
+import dusk2 from "./images/dusk-2.png"
+import wolf from "./images/wolf.png"
+import flowers2 from "./images/flowers-2.png"
 
 import novaThumbnail from "./thumbnails/nova.webp";
 import fluidThumbnail from "./thumbnails/fluid.webp";
@@ -215,6 +221,12 @@ import droplets2Thumbnail  from "./thumbnails/droplets-2.webp";
 import fadeThumbnail  from  "./thumbnails/fade.webp";
 import quartzThumbnail  from "./thumbnails/quartz.webp"
 import rocksThumbnail  from "./thumbnails/rocks.webp"
+import flow2Thumbnail  from "./thumbnails/flow-2.webp"
+import droneThumbnail  from "./thumbnails/drone.webp"
+import o2Thumbnail  from "./thumbnails/O-2.webp"
+import dusk2Thumbnail  from "./thumbnails/dusk-2.webp"
+import wolfThumbnail  from "./thumbnails/wolf.webp"
+import flowers2Thumbnail  from "./thumbnails/flowers-2.webp"
 
 import { Wallpaper, Filter, Order } from "./types";
 
@@ -955,14 +967,14 @@ const allWallPapers: Wallpaper[] = [
   {
     name: "droplets-2",
     src: droplets2,
-    thumbnail: droplets2,
+    thumbnail: droplets2Thumbnail,
     tags: ["Dark", "Abstract", "3d", "Red", "Purple"],
     date: 1740719536087,
   },
   {
     name: "fade",
     src: fade,
-    thumbnail: fade,
+    thumbnail: fadeThumbnail,
     tags: ["Light", "Abstract", "3d", "Orange", "White", "Purple"],
     date: 1740719536187,
   },
@@ -979,6 +991,48 @@ const allWallPapers: Wallpaper[] = [
     thumbnail: rocksThumbnail,
     tags: ["Dark", "Abstract", "3d", "Black", "Purple"],
     date: 1740719536387,
+  },
+  {
+    name: "flow-2",
+    src: flow2,
+    thumbnail: flow2Thumbnail,
+    tags: ["Dark", "Abstract", "3d", "Black", "Orange"],
+    date: 1741794477680,
+  },
+  {
+    name: "drone",
+    src: drone,
+    thumbnail: droneThumbnail,
+    tags: ["Dark", "3d", "Black", "Purple", "Blue"],
+    date: 1741794477780,
+  },
+  {
+    name: "dusk-2",
+    src: dusk2,
+    thumbnail: dusk2Thumbnail,
+    tags: ["Dark", "Illustration", "Nature", "Blue", "Red", "Purple"],
+    date: 1741794477980,
+  },
+  {
+    name: "wolf",
+    src: wolf,
+    thumbnail: wolfThumbnail,
+    tags: ["Light", "Illustration", "Nature", "White", "Orange"],
+    date: 1741794478180,
+  },
+  {
+    name: "o2",
+    src: o2,
+    thumbnail: o2Thumbnail,
+    tags: ["Dark", "Painting", "Abstract", "Black", "Purple", "Green"],
+    date: 1741794478240,
+  },
+  {
+    name: "flowers-2",
+    src: flowers2,
+    thumbnail: flowers2Thumbnail,
+    tags: ["Light", "Illustration", "Nature", "White", "Orange", "Purple"],
+    date: 1741794478280,
   },
 ];
 
